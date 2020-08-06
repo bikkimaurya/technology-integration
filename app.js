@@ -21,7 +21,7 @@ app.post("/predict",function(req,res){
     python.run("script.py", options, function (err, data) {
         if (err) {
             console.log(err)
-            res.send("please try after some time");
+            res.send(err);
         }
         else{
             console.log(data.toString())
