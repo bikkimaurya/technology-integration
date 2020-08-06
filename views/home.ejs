@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <title>Diabetes predicotor</title>
+
+
+    <style>
+        body{
+            
+            margin-top: 50px;
+            background-color: lightpink;
+        }
+        h1{
+            font-weight: bolder;
+            color: palevioletred;
+        }
+        .row{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: 10vh;
+            /* border: solid black thin; */
+            background-color: palevioletred;
+            border-radius: 10px;
+           
+        }
+        /* .container{
+            border: solid black thin;
+            background-color: darkgray;
+            border-radius: 10px;
+        } */
+
+        input{
+            background-color: transparent;
+            color: white;
+            border-radius: 10px;
+            border: solid white thin;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Basic application of integration of NODE.JS + PYHTON for machine learning</h1>
+    <div class="container">
+        <div class="row shadow">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 text-left form-container">
+                <form action="/predict" method="post">
+                    <table>
+                        <tr>
+                            <td> <label for="Pregnancies">Pregnancies</label></td>
+                            <td><input type="number"  required step=".1" name="Pregnancies" id="Pregnancies"></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="Glucose">Glucose</label></td>
+                            <td><input type="number"  required step=".1" name="Glucose" id="Glucose"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="BloodPressure">BloodPressure</label></td>
+                            <td><input type="number"  required step=".1" name="BloodPressure" id="BloodPressure"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="SkinThickness">SkinThickness</label></td>
+                            <td>    <input type="number"  required step=".1" name="SkinThickness" id="SkinThickness"> </td>
+                        </tr>
+                        <tr>
+                            <td><label for="Insulin">Insulin</label></td>
+                            <td><input type="number"  required step=".1" name="Insulin" id="Insulin">  </td>
+                        </tr>
+                        <tr>
+                            <td><label for="BMI">BMI</label>  </td>
+                            <td> <input type="number"  required step=".1" name="BMI" id="BMI"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction</label>  </td>
+                            <td> <input type="number"  required step=".1" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label for="Age">Age</label>  </td>
+                            <td>  <input type="number"  required step=".1" name="Age" id="Age"> </td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-secondary container">Predict</button>
+                </form>
+                <p>Some examples</p>
+                <p>
+                    Pregnancies 	Glucose 	BloodPressure 	SkinThickness 	Insulin 	BMI 	DiabetesPedigreeFunction 	Age 	Outcome <br>
+                        0 	6 	148 	72 	35 	0 	33.6 	0.627 	50 	1 <br>
+                        1 	1 	85 	66 	29 	0 	26.6 	0.351 	31 	0 <br>
+                        2 	8 	183 	64 	0 	0 	23.3 	0.672 	32 	1 <br>
+                        3 	1 	89 	66 	23 	94 	28.1 	0.167 	21 	0 <br>
+                        4 	0 	137 	40 	35 	1       68 	43.1 	2.288 	33 	1 <br>
+                        5 	5 	116 	74 	0 	0 	25.6 	0.201 	30 	<br>
+                </p>
+
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
